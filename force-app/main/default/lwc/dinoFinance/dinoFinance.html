@@ -1,0 +1,107 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-28-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card >
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small" data-fund="Parag_Parikh"  onclick={handleFund}>
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                    <image src={ParagParikh_Icon} height="50px;" width="50px;" class="slds-border_top slds-border_right slds-border_left slds-border_bottom"></image>
+                    <h2 style="font-size: 18px;"><br>Parag Parikh Flexi Cap <br> Direct Fund ....</br></h2>
+                    <h1 style="font-size: 25px;color:grey;" class="slds-m-top_large"><b style="color:black;">46.7%</b>(3Y)</h1>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small" data-fund="ICICI" onclick={handleFund}>
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                    <image src={ICICI_Icon} height="50px;" width="50px;" class="slds-border_top slds-border_right slds-border_left slds-border_bottom"></image>
+                    <h2 style="font-size: 18px;"><br>ICICI Prudential Commmodities  <br> Direct Fund ....</br></h2>
+                    <h1 style="font-size: 25px;color:grey;" class="slds-m-top_large"><b style="color:black;">37.3%</b>(3Y)</h1>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+
+
+        <!-- Fund Detail Component -->
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" >
+                <div class="slds-p-around_small">
+                    <image src={ICICI_Icon} height="50px;" width="50px;" class="slds-border_top slds-border_right slds-border_left slds-border_bottom"></image>
+                    <h2 style="font-size: 18px;"><br>ICICI Prudential Commmodities Direct Fund ....</h2>
+                    <button class="slds-button slds-button_neutral" style="color: black;border-radius:20px;">Equity</button>
+                    <button class="slds-button slds-button_neutral" style="color: black;border-radius:20px;">Small Cap</button>
+                    <button class="slds-button slds-button_neutral" style="color: black;border-radius:20px;">Very High Risk</button>
+
+                    <!-- Footer Section of Details -->
+                    
+                    <lightning-layout-item  padding="around-small">
+                        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <div class="slds-border_right">
+                            <div class="slds-p-around_large slds-grid slds-gutters">
+                                <div class="slds-col slds-size_6-of-12">
+                                    <h4>Min.SIP Amount </h4>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <h4>₹ 1200 </h4>
+                                </div>
+                            </div>
+
+                            <div class="slds-p-around_large slds-grid slds-gutters">
+                                <div class="slds-col slds-size_6-of-12">
+                                    <h4>Rating</h4>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <h4>3 ★</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item  padding="around-small">
+
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">  
+                    <div class="slds-p-around_large slds-grid slds-gutters">
+                        <div class="slds-col slds-size_6-of-12">
+                            <h4>Fund Size</h4>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <h4>₹ 1,00,000</h4>
+                        </div>
+                    </div>
+                    </div>
+                </lightning-layout-item>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+
+
+        <!-- Calculation Tabset  -->
+
+        <!-- <lightning-card  variant="base"> -->
+          <div style="width: 400px;">
+            <lightning-tabset class="mTabset">
+                <lightning-tab label="Monthly SIP">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="text-input-id-47">Input Label</label>
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left" style="width:120px;">
+                          <input  style="background-color:rgba(37, 239, 81, 0.573);" type="text" id="text-input-id-47" placeholder="Enter Date" class="slds-input" />
+                        </div>
+                      </div>
+                </lightning-tab>
+                <lightning-tab label="One-Time" >
+                    One-Time
+                </lightning-tab>
+            </lightning-tabset>
+          </div>
+        <!-- </lightning-card> -->
+
+
+        
+
+    </lightning-card>  
+</template>

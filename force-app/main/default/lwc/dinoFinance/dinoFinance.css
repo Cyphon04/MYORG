@@ -1,0 +1,5 @@
+.mTabset{
+    --slds-c-tabs-item-text-color-active:#00B386;
+    --slds-c-tabs-item-color-border-active:#00B386;
+    --slds-c-tabs-item-color-border-hover:#00B386;
+}

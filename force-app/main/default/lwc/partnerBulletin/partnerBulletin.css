@@ -1,0 +1,3 @@
+.slds-select_container::before { border-bottom: none;}
+.slds-select_container::after { border-top: none;}
+.slds-select_container .slds-select { -webkit-appearance : menuList}

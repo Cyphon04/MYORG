@@ -1,0 +1,85 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-25-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <lightning-progress-indicator current-step={current} type="base" has-error="true" variant="base">
+        <lightning-progress-step label="Step 1" value="1" ></lightning-progress-step>
+        <lightning-progress-step label="Step 2" value="2" ></lightning-progress-step>
+        <lightning-progress-step label="Step 3" value="3" ></lightning-progress-step>
+        <lightning-progress-step label="Step 4" value="4" ></lightning-progress-step>
+    </lightning-progress-indicator>
+
+    <lightning-button label="Next step" onclick={toNext}></lightning-button>
+    
+
+
+    <!-- Custom Lookup Datatable -->
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="combobox-id-3" id="combobox-label-id-33">Account</label>
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <!-- Add the Property to see the DropDown  slds-is-open-->
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                    <template if:false={isSearch}>
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input type="text" class="slds-input slds-combobox__input slds-has-focus"  value={value} onclick={handleClick} aria-activedescendant="option1" aria-autocomplete="list" aria-controls="listbox-id-3" aria-expanded="true" aria-haspopup="listbox"  role="combobox" placeholder="Search..." />
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    </template>
+
+                    <!-- When Value is Selected -->
+                    <template if:true={isSearch}>
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                                <!-- <svg  > -->
+                                    <lightning-icon class="slds-input__icon" size="small" aria-hidden="true" icon-name="standard:account" alternative-text="Doc image" ></lightning-icon>
+                                <!-- </svg> -->
+                                <input type="text" class="slds-input slds-combobox__input slds-has-focus"  value={value} onclick={handleClick} aria-activedescendant="option1" aria-autocomplete="list" aria-controls="listbox-id-3" aria-expanded="true" aria-haspopup="listbox"  role="combobox" placeholder="Search..." />
+                                </div>
+                            <!-- <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                </svg>
+                            </span> -->
+                        </div>
+                    </template>
+
+
+                    <!-- Adding the Lookup Fields -->
+                    <div id="listbox-id-3" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox" aria-label="Place Details"  tabindex="0" aria-busy="false">
+                       <template for:each={data} for:item="val" >
+                       <ul class="slds-listbox slds-listbox_vertical" role="presentation" onclick={closeList} key={id}>
+                           <li role="presentation" class="slds-listbox__item">
+                               <div aria-selected="true" id="option229" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus" role="option" tabindex="0"  >
+                                    <span class="slds-media__figure slds-listbox__option-icon">
+                                        <span class="slds-icon_container slds-icon-standard-account" >
+                                            <svg class="slds-icon slds-icon_small" aria-hidden="true" data-business = {val.Name}>
+                                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <span class="slds-media__body">
+                                        <span class="slds-listbox__option-text slds-listbox__option-text_entity" data-business = {val.Name} >{val.Name}</span>
+                                        <span class="slds-listbox__option-meta slds-listbox__option-meta_entity" data-business = {val.Name}>Account • Burlington, NC</span>
+                                    </span>
+                                </div>
+                           </li>
+                       </ul>
+                       </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,47 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-09-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+
+    <!-- Main Lightning Card -->
+    <lightning-card >
+      <!-- Header Section -->
+      <div slot="title">
+        <lightning-input placeholder="Search by Name" variant="label-hidden" type="search"></lightning-input>
+      </div>
+
+      <div slot="actions">
+        <lightning-combobox
+          class="slds-has-icon-only"
+          name="progress"
+          value={value}
+          placeholder="Select Progress"
+          options={options}
+          onchange={handleChange} 
+          variant="label-hidden"
+          icon-name="utility:chevrondown"
+        ></lightning-combobox>
+      </div>
+
+      <!-- Body aur Data Section -->
+      <div slot="body">
+      </div>
+
+      <!-- Pagination or Footer Section -->
+      <div slot="footer">
+        <!-- Card Body  -->
+        
+      </div>
+    </lightning-card>
+
+
+    
+    
+    
+
+    
+</template>
